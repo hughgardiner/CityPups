@@ -29,7 +29,7 @@ const sizePageButtons = [
   {
     buttonText: 'Large',
     iconSource: largeDogIcon,
-    iconStyle: styles.dogIconStyle,
+    iconStyle: [styles.dogIconStyle, styles.largeDogIconSize],
     multiSelect: true
   }
 ]

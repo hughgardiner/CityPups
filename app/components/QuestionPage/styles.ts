@@ -64,7 +64,7 @@ export default StyleSheet.create({
     backgroundColor: PRIMARY_GREEN,
     alignItems: 'center',
     paddingVertical: 15,
-    shadowOffset: { width: 5, height: 5 },
+    shadowOffset: { width: 2, height: 2 },
     shadowColor: 'gray',
     shadowOpacity: 1.0,
   },

@@ -12,7 +12,6 @@ import dogGroup from '../../../assets/images/dogGroup.png';
 import helperDog from '../../../assets/images/helperDog.png';
 import boneLogo from '../../..//assets/images/boneLogo.png';
 
-
 export default class HomePage extends React.Component {
   constructor(props) {
     super(props)

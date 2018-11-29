@@ -1,6 +1,7 @@
 import { createStackNavigator, createAppContainer } from "react-navigation";
 import HomePage from './app/components/HomePage/HomePage';
 import SizeQuestionPage from './app/components/SizeQuestionPage/SizeQuestionPage';
+import LivingQuestionPage from './app/components/LivingQuestionPage/LivingQuestionPage';
 
 
 const AppNavigator = createStackNavigator({
@@ -9,6 +10,9 @@ const AppNavigator = createStackNavigator({
   },
   SizeQuestionPage: {
     screen: SizeQuestionPage
+  },
+  LivingQuestionPage: {
+    screen: LivingQuestionPage
   }
 },
 {

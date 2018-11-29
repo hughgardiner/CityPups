@@ -1,11 +1,10 @@
 import React from 'react';
-import { AnswerProps } from '../AnswerButton/AnswerButton';
 import styles from './styles';
 import tinyDogIcon from '../../../assets/images/tinyDogIcon.png';
 import smallDogIcon from '../../../assets/images/smallDogIcon.png';
 import mediumDogIcon from '../../../assets/images/mediumDogIcon.png';
 import largeDogIcon from '../../../assets/images/largeDogIcon.png';
-import { QuestionPage, QuestionPageProps } from '../QuestionPage/QuestionPage';
+import { QuestionPage } from '../QuestionPage/QuestionPage';
 
 const sizePageButtons = [
   {

@@ -6,22 +6,12 @@ import {
   ImageBackground,
   Image,
   TouchableHighlight,
-  RegisteredStyle,
-  TextStyle,
 } from 'react-native';
-import { AnswerButton, AnswerProps } from '../AnswerButton/AnswerButton';
+import { AnswerButton } from '../AnswerButton/AnswerButton';
 import styles from './styles';
 import questionPageBackground from '../../../assets/images/questionPageBackground.png';
 import backArrow from '../../../assets/images/backArrow.png';
 import CityPup from '../CityPup/CityPup';
-
-// export interface QuestionPageProps {
-//   questionText: string;
-//   answerButtons: AnswerProps[];
-//   previousPage: string;
-//   nextPage: string;
-//   navigation: func;
-// }
 
 export class QuestionPage extends React.Component {
   constructor(props) {

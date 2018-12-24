@@ -3,29 +3,11 @@ import {
   View,
   TouchableOpacity,
   Image,
-  Text,
-  ImageSourcePropType,
-  ViewStyle,
-  RegisteredStyle,
-  TextStyle,
+  Text
 } from 'react-native';
 import styles from './styles';
 import answerCheck from '../../../assets/images/answerCheck.png';
-
-// export interface AnswerProps {
-//   iconSource: ImageSourcePropType;
-//   iconStyle: any;
-//   buttonText: string;
-//   buttonTextStyle?: RegisteredStyle<TextStyle>;
-//   multiSelect?: boolean;
-// }
-
-// interface AnswerState {
-//   selected: boolean;
-//   buttonColor: RegisteredStyle<ViewStyle>;
-//   textColor: RegisteredStyle<ViewStyle>;
-//   iconColor: RegisteredStyle<ViewStyle>;
-// }
+import { observer, inject } from 'mobx-react';
 
 const selectedState = {
   selected: true,
@@ -41,6 +23,8 @@ const unselectedState = {
   iconColor: styles.iconUnselectedColor,
 };
 
+@inject('store')
+@observer
 export class AnswerButton extends React.Component {
   constructor(props) {
     super(props);
@@ -51,6 +35,8 @@ export class AnswerButton extends React.Component {
     this.state.selected
       ? this.setState(unselectedState)
       : this.setState(selectedState);
+    this.props.store.sizeDogAnswers.push(this.props.buttonText);
+    console.log(this.props);
   };
 
   render() {

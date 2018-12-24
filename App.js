@@ -1,8 +1,12 @@
+import React from 'react';
 import { createStackNavigator, createAppContainer } from "react-navigation";
 import HomePage from './app/components/HomePage/HomePage';
 import SizeQuestionPage from './app/components/SizeQuestionPage/SizeQuestionPage';
 import LivingQuestionPage from './app/components/LivingQuestionPage/LivingQuestionPage';
 import SpaceQuestionPage from './app/components/SpaceQuestionPage/SpaceQuestionPage';
+import SuveryAnswers from './app/SurveyAnswers';
+import { Provider }  from 'mobx-react';
+
 
 const AppNavigator = createStackNavigator({
   HomePage: {
@@ -25,4 +29,16 @@ const AppNavigator = createStackNavigator({
   }
 });
 
-export default createAppContainer(AppNavigator);
+// export default createAppContainer(AppNavigator);
+const AppContainer = createAppContainer(AppNavigator);
+const store = new SuveryAnswers();
+export default class App extends React.Component {
+  render() {
+    return (
+      <Provider store={store}>
+        <AppContainer/>
+      </Provider>
+    )
+  }
+}
+    

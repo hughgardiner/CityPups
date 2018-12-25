@@ -13,7 +13,7 @@ import questionPageBackground from '../../../assets/images/questionPageBackgroun
 import backArrow from '../../../assets/images/backArrow.png';
 import CityPup from '../CityPup/CityPup';
 
-export class QuestionPage extends React.Component {
+export default class QuestionPage extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -27,7 +27,7 @@ export class QuestionPage extends React.Component {
         buttonText={answerButton.buttonText}
         iconSource={answerButton.iconSource}
         iconStyle={answerButton.iconStyle}
-        multiSelect={answerButton.multiSelect} />);
+        multiSelect={this.props.multiSelect} />);
     });
     return (
       <View style={styles.container}>

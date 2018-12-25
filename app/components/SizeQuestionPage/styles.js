@@ -8,10 +8,10 @@ export default StyleSheet.create({
     resizeMode: 'contain',
   },
   largeDogIconSize: {
-  width: 30,
-  height: 30,
-  left: 10,
-  top: 3,
+    width: 30,
+    height: 30,
+    left: 10,
+    top: 3,
   }, 
   mediumDogIconSize: {
     width: 25,

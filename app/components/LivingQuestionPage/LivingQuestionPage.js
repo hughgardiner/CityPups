@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './styles';
-import { QuestionPage } from '../QuestionPage/QuestionPage';
+import QuestionPage from '../QuestionPage/QuestionPage';
 import smallApartmentIcon from '../../../assets/images/smallApartmentIcon.png';
 import largeApartmentIcon from '../../../assets/images/largeApartmentIcon.png';
 import houseIcon from '../../../assets/images/houseIcon.png';

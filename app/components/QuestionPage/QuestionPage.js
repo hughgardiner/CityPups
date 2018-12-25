@@ -20,15 +20,16 @@ export default class QuestionPage extends React.Component {
 
   render() {
     const { navigate } = this.props.navigation;
-    const answerButtons = this.props.answerButtons.map((answerButton, i) => {
+    const answerButtons = this.props.answerButtons.map(function(answerButton, i) {
       return (<AnswerButton
         key={i}
         buttonTextStyle={answerButton.buttonTextStyle}
         buttonText={answerButton.buttonText}
         iconSource={answerButton.iconSource}
         iconStyle={answerButton.iconStyle}
-        multiSelect={this.props.multiSelect} />);
-    });
+        multiSelect={answerButton.multiSelect}
+        answerKey={this.props.answerKey} />);
+    }, this);
     return (
       <View style={styles.container}>
         <View style={styles.questionTopPanel}>

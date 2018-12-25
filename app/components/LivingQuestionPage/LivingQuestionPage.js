@@ -33,7 +33,8 @@ export default class LivingQuestionPage extends React.Component {
       navigation: this.props.navigation,
       answerButtons: livingPageButtons,
       previousPage: 'SizeQuestionPage',
-      nextPage: 'SpaceQuestionPage'
+      nextPage: 'SpaceQuestionPage',
+      answerKey: 'livingAnswer'
     }
     return <QuestionPage {...livingPageProps} />
   }

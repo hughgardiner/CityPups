@@ -37,7 +37,8 @@ export default class SizeQuestionPage extends React.Component {
       answerButtons: sizePageButtons,
       previousPage: 'HomePage',
       nextPage: 'LivingQuestionPage',
-      multiSelect: true
+      multiSelect: true,
+      answerKey: 'sizeAnswers'
     }
     console.log('Size Question Page Props:')
     console.log(this.props)

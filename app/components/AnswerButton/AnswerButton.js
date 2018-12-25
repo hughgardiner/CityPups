@@ -8,6 +8,7 @@ import {
 import styles from './styles';
 import answerCheck from '../../../assets/images/answerCheck.png';
 import { observer, inject } from 'mobx-react';
+import * as StateService from '../../utils/StateService';
 
 const selectedState = {
   selected: true,
@@ -29,14 +30,20 @@ export class AnswerButton extends React.Component {
   constructor(props) {
     super(props);
     this.state = unselectedState;
+    this.buttonPressed = this.buttonPressed.bind(this);
   }
 
   buttonPressed = () => {
-    this.state.selected
-      ? this.setState(unselectedState)
-      : this.setState(selectedState);
-    this.props.store.sizeDogAnswers.push(this.props.buttonText);
-    console.log(this.props);
+    let answerKey = this.props.answerKey;
+    if (this.state.selected) {
+      this.setState(unselectedState);
+      StateService.answerUnselected(this.props.store.answers, answerKey, this.props.buttonText);
+    }
+    else {
+      this.setState(selectedState);
+      StateService.answerSelected(this.props.store.answers, answerKey, this.props.buttonText);
+    }
+    console.log(this.props.store);
   };
 
   render() {

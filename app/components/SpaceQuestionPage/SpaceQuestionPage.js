@@ -37,7 +37,8 @@ export default class SpaceQuestionPage extends React.Component {
       answerButtons: spacePageButtons,
       previousPage: 'LivingQuestionPage',
       nextPage: 'RoommateQuestionPage',
-      multiSelect: true
+      multiSelect: true,
+      answerKey: 'spaceAnswer'
     }
     return (
       <QuestionPage {...spacePageProps} />

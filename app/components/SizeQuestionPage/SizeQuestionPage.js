@@ -36,7 +36,7 @@ export default class SizeQuestionPage extends React.Component {
       navigation: this.props.navigation,
       answerButtons: sizePageButtons,
       previousPage: 'HomePage',
-      nextPage: 'LivingQuestionPage',
+      nextPage: 'HousingQuestionPage',
       multiSelect: true,
       answerKey: 'sizeAnswers'
     }

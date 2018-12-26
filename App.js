@@ -2,7 +2,7 @@ import React from 'react';
 import { createStackNavigator, createAppContainer } from "react-navigation";
 import HomePage from './app/components/HomePage/HomePage';
 import SizeQuestionPage from './app/components/SizeQuestionPage/SizeQuestionPage';
-import LivingQuestionPage from './app/components/LivingQuestionPage/LivingQuestionPage';
+import HousingQuestionPage from './app/components/HousingQuestionPage/HousingQuestionPage';
 import SpaceQuestionPage from './app/components/SpaceQuestionPage/SpaceQuestionPage';
 import SuveryAnswers from './app/SurveyAnswers';
 import { Provider }  from 'mobx-react';
@@ -15,8 +15,8 @@ const AppNavigator = createStackNavigator({
   SizeQuestionPage: {
     screen: SizeQuestionPage
   },
-  LivingQuestionPage: {
-    screen: LivingQuestionPage
+  HousingQuestionPage: {
+    screen: HousingQuestionPage
   },
   SpaceQuestionPage: {
     screen: SpaceQuestionPage

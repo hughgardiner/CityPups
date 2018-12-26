@@ -27,7 +27,7 @@ export default class QuestionPage extends React.Component {
         buttonText={answerButton.buttonText}
         iconSource={answerButton.iconSource}
         iconStyle={answerButton.iconStyle}
-        multiSelect={answerButton.multiSelect}
+        multiSelect={this.props.multiSelect}
         answerKey={this.props.answerKey} />);
     }, this);
     return (

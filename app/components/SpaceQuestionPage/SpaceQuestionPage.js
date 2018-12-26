@@ -35,7 +35,7 @@ export default class SpaceQuestionPage extends React.Component {
       questionText: "How much space\nwill your dog have\nto play?",
       navigation: this.props.navigation,
       answerButtons: spacePageButtons,
-      previousPage: 'LivingQuestionPage',
+      previousPage: 'HousingQuestionPage',
       nextPage: 'RoommateQuestionPage',
       multiSelect: true,
       answerKey: 'spaceAnswer'

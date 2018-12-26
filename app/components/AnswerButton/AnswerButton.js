@@ -3,29 +3,12 @@ import {
   View,
   TouchableOpacity,
   Image,
-  Text,
-  ImageSourcePropType,
-  ViewStyle,
-  RegisteredStyle,
-  TextStyle,
+  Text
 } from 'react-native';
 import styles from './styles';
 import answerCheck from '../../../assets/images/answerCheck.png';
-
-// export interface AnswerProps {
-//   iconSource: ImageSourcePropType;
-//   iconStyle: any;
-//   buttonText: string;
-//   buttonTextStyle?: RegisteredStyle<TextStyle>;
-//   multiSelect?: boolean;
-// }
-
-// interface AnswerState {
-//   selected: boolean;
-//   buttonColor: RegisteredStyle<ViewStyle>;
-//   textColor: RegisteredStyle<ViewStyle>;
-//   iconColor: RegisteredStyle<ViewStyle>;
-// }
+import { observer, inject } from 'mobx-react';
+import * as StateService from '../../utils/StateService';
 
 const selectedState = {
   selected: true,
@@ -41,16 +24,26 @@ const unselectedState = {
   iconColor: styles.iconUnselectedColor,
 };
 
+@inject('store')
+@observer
 export class AnswerButton extends React.Component {
   constructor(props) {
     super(props);
     this.state = unselectedState;
+    this.buttonPressed = this.buttonPressed.bind(this);
   }
 
   buttonPressed = () => {
-    this.state.selected
-      ? this.setState(unselectedState)
-      : this.setState(selectedState);
+    let answerKey = this.props.answerKey;
+    if (this.state.selected) {
+      this.setState(unselectedState);
+      StateService.answerUnselected(this.props.store.answers, answerKey, this.props.buttonText);
+    }
+    else {
+      this.setState(selectedState);
+      StateService.answerSelected(this.props.store.answers, answerKey, this.props.buttonText);
+    }
+    console.log(this.props.store);
   };
 
   render() {

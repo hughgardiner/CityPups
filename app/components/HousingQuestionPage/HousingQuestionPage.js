@@ -5,7 +5,7 @@ import smallApartmentIcon from '../../../assets/images/smallApartmentIcon.png';
 import largeApartmentIcon from '../../../assets/images/largeApartmentIcon.png';
 import houseIcon from '../../../assets/images/houseIcon.png';
 
-const livingPageButtons = [
+const housingPageButtons = [
   {
     buttonText: 'I live in a small apartment',
     buttonTextStyle: styles.answerButtonText,
@@ -26,15 +26,16 @@ const livingPageButtons = [
   },
 ]
 
-export default class LivingQuestionPage extends React.Component {
+export default class HousingQuestionPage extends React.Component {
   render() {
-    const livingPageProps = {
+    const housingPageProps = {
       questionText: "Where will your \n new dog live?",
       navigation: this.props.navigation,
-      answerButtons: livingPageButtons,
+      answerButtons: housingPageButtons,
       previousPage: 'SizeQuestionPage',
-      nextPage: 'SpaceQuestionPage'
+      nextPage: 'SpaceQuestionPage',
+      answerKey: 'housingAnswer'
     }
-    return <QuestionPage {...livingPageProps} />
+    return <QuestionPage {...housingPageProps} />
   }
 }

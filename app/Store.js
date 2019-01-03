@@ -1,7 +1,4 @@
-import { observable } from 'mobx';
-import { SIZE, TINY_DOG, SMALL_DOG, MEDIUM_DOG, LARGE_DOG } from './constants/dogSizes';
-import { HOUSING, SMALL, LARGE, HOME } from './constants/housing';
-import { SPACE, NONE, DOG_PARK, SMALL_YARD, BIG_YARD } from './constants/space';
+import { observable, action } from 'mobx';
 
 export default class Store {
   @observable questions = {
@@ -21,6 +18,21 @@ export default class Store {
       DOG_PARK: false,
       SMALL_YARD: false,
       BIG_YARD: false
+    }
+  }
+
+  @action toggleAnswer(questionKey, buttonKey, multiSelect = false) {
+    this.questions[questionKey][buttonKey] = !this.questions[questionKey][buttonKey];
+    if (!multiSelect && this.questions[questionKey][buttonKey] === true) {
+      this.resetStore(this.questions[questionKey], buttonKey);
+    }
+  }
+
+  resetStore(store, buttonKey) {
+    for (var key in store) {
+      if (key != buttonKey) {
+        store[key] = false;
+      }
     }
   }
 }

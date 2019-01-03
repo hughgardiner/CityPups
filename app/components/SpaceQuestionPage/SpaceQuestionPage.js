@@ -5,24 +5,29 @@ import parkIcon from '../../../assets/images/parkIcon.png';
 import plantIcon from '../../../assets/images/plantIcon.png';
 import fenceIcon from '../../../assets/images/fenceIcon.png';
 import QuestionPage from '../QuestionPage/QuestionPage';
+import * as Space from '../../constants/space';
 
 const spacePageButtons = [
     {
+      buttonKey: Space.NONE,
       buttonText: 'No outdoor space',
       iconStyle: [styles.spaceIconStyle],
       iconSource: warningIcon
     },
     {
+      buttonKey: Space.DOG_PARK,
       buttonText: 'Dog park nearby',
       iconStyle: [styles.spaceIconStyle],
       iconSource: parkIcon
     },
     {
+      buttonKey: Space.SMALL_YARD,
       buttonText: 'Small yard',
       iconStyle: [styles.spaceIconStyle],
       iconSource: plantIcon
     },
     {
+      buttonKey: Space.BIG_YARD,
       buttonText: 'Good sized yard',
       iconStyle: [styles.spaceIconStyle],
       iconSource: fenceIcon
@@ -38,7 +43,7 @@ export default class SpaceQuestionPage extends React.Component {
       previousPage: 'HousingQuestionPage',
       nextPage: 'RoommateQuestionPage',
       multiSelect: true,
-      answerKey: 'spaceAnswer'
+      questionKey: Space.SPACE
     }
     return (
       <QuestionPage {...spacePageProps} />

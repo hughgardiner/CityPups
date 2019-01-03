@@ -5,24 +5,29 @@ import smallDogIcon from '../../../assets/images/smallDogIcon.png';
 import mediumDogIcon from '../../../assets/images/mediumDogIcon.png';
 import largeDogIcon from '../../../assets/images/largeDogIcon.png';
 import QuestionPage from '../QuestionPage/QuestionPage';
+import * as DogSizes from '../../constants/dogSizes';
 
 const sizePageButtons = [
   {
+    buttonKey: DogSizes.TINY_DOG,
     buttonText: 'Tiny',
     iconSource: tinyDogIcon,
     iconStyle: [styles.dogIconStyle, styles.tinyDogIconSize]
   },
   {
+    buttonKey: DogSizes.SMALL_DOG,
     buttonText: 'Small',
     iconSource: smallDogIcon,
     iconStyle: [styles.dogIconStyle, styles.smallDogIconSize]
   },
   {
+    buttonKey: DogSizes.MEDIUM_DOG,
     buttonText: 'Medium',
     iconSource: mediumDogIcon,
     iconStyle: [styles.dogIconStyle, styles.mediumDogIconSize]
   },
   {
+    buttonKey: DogSizes.LARGE_DOG,
     buttonText: 'Large',
     iconSource: largeDogIcon,
     iconStyle: [styles.dogIconStyle, styles.largeDogIconSize]
@@ -38,10 +43,8 @@ export default class SizeQuestionPage extends React.Component {
       previousPage: 'HomePage',
       nextPage: 'HousingQuestionPage',
       multiSelect: true,
-      answerKey: 'sizeAnswers'
+      questionKey: DogSizes.SIZE
     }
-    console.log('Size Question Page Props:')
-    console.log(this.props)
     return (
       <QuestionPage {...sizePageProps} />
     );

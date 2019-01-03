@@ -9,6 +9,7 @@ import styles from './styles';
 import answerCheck from '../../../assets/images/answerCheck.png';
 import { observer, inject } from 'mobx-react';
 import * as StateService from '../../utils/StateService';
+import { toggleAnswer } from '../../utils/StateService';
 
 const selectedState = {
   selected: true,
@@ -34,16 +35,13 @@ export class AnswerButton extends React.Component {
   }
 
   buttonPressed = () => {
-    let answerKey = this.props.answerKey;
+    toggleAnswer(this.props.store.questions, this.props.questionKey, this.props.buttonKey);
     if (this.state.selected) {
       this.setState(unselectedState);
-      StateService.answerUnselected(this.props.store.answers, answerKey, this.props.buttonText);
     }
     else {
       this.setState(selectedState);
-      StateService.answerSelected(this.props.store.answers, answerKey, this.props.buttonText);
     }
-    console.log(this.props.store);
   };
 
   render() {

@@ -23,12 +23,13 @@ export default class QuestionPage extends React.Component {
     const answerButtons = this.props.answerButtons.map(function(answerButton, i) {
       return (<AnswerButton
         key={i}
+        buttonKey={answerButton.buttonKey}
         buttonTextStyle={answerButton.buttonTextStyle}
         buttonText={answerButton.buttonText}
         iconSource={answerButton.iconSource}
         iconStyle={answerButton.iconStyle}
         multiSelect={this.props.multiSelect}
-        answerKey={this.props.answerKey} />);
+        questionKey={this.props.questionKey} />);
     }, this);
     return (
       <View style={styles.container}>

@@ -1,0 +1,5 @@
+export const SPACE = 'SPACE'
+export const NONE = 'NONE'
+export const DOG_PARK = 'DOG_PARK'
+export const SMALL_YARD = 'SMALL_YARD'
+export const BIG_YARD = 'BIG_YARD'

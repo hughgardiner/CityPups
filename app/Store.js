@@ -18,6 +18,12 @@ export default class Store {
       DOG_PARK: false,
       SMALL_YARD: false,
       BIG_YARD: false
+    },
+    ROOMMATES: {
+      NONE: false,
+      OTHER_DOGS: false,
+      CATS: false,
+      OTHER_PETS: false
     }
   }
 

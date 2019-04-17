@@ -1,3 +1,4 @@
+export const ROOMMATES = 'ROOMMATES';
 export const NONE = 'NONE';
 export const OTHER_DOGS = 'OTHER_DOGS';
 export const CATS = 'CATS';

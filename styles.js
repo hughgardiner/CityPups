@@ -1,4 +1,6 @@
 import { StyleSheet } from 'react-native';
+import { PRIMARY_GREEN } from '../../styles';
+
 export default StyleSheet.create({
   container: {
     flex: 1,
@@ -37,7 +39,7 @@ export default StyleSheet.create({
     alignItems: 'center',
   },
   greetingText: {
-    color: '#00B561',
+    color: PRIMARY_GREEN,
     fontFamily: 'HelveticaNeue',
     fontSize: 18,
     lineHeight: 25,
@@ -54,7 +56,7 @@ export default StyleSheet.create({
     paddingVertical: -50,
   },
   navigationButton: {
-    backgroundColor: '#00B561',
+    backgroundColor: PRIMARY_GREEN,
     alignItems: 'center',
     paddingVertical: 15,
     shadowOffset: { width: 5, height: 5 },

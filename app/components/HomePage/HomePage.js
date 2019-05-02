@@ -6,7 +6,6 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import { Font, AppLoading } from 'expo';
 import styles from './styles';
 import dogGroup from '../../../assets/images/dogGroup.png';
 import helperDog from '../../../assets/images/helperDog.png';
@@ -16,24 +15,8 @@ import { observer, inject } from 'mobx-react'
 @inject('store')
 @observer
 export default class HomePage extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      fontLoaded: false
-    }
-  }
-  async componentDidMount() {
-    await Font.loadAsync({
-      "DancingScript-Bold": require("../../../assets/fonts/DancingScript-Bold.ttf"),
-    })
-    this.setState({ fontLoaded: true })
-  }
-
   render() {
     const { navigate } = this.props.navigation;
-    if (!this.state.fontLoaded) {
-      return <AppLoading />
-    }
     return (
       <View style={styles.container}>
         <View style={styles.topPanel}>

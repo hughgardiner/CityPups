@@ -11,7 +11,7 @@ export default StyleSheet.create({
     backgroundColor: 'white',
     alignItems: 'flex-start',
     paddingVertical: 11,
-    borderColor: '#00B561',
+    borderColor: PRIMARY_GREEN,
     borderWidth: 1.1,
     borderRadius: 10,
     flexDirection: 'row',

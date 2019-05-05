@@ -23,5 +23,12 @@ export default StyleSheet.create({
   listView: {
     padding: 10,
     marginBottom: 10,
-  }
+  },
+  backArrowButton: {
+    marginLeft: 10,
+    alignSelf: 'flex-start',
+    width: 30,
+    height: 30,
+    resizeMode: 'contain'
+  },
 });

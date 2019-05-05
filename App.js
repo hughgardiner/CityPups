@@ -13,7 +13,7 @@ import { Provider }  from 'mobx-react';
 
 const AppNavigator = createStackNavigator({
   HomePage: {
-    screen: MatchesPage
+    screen: HomePage
   },
   SizeQuestionPage: {
     screen: SizeQuestionPage

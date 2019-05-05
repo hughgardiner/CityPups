@@ -12,11 +12,12 @@ import { MatchCard } from '../MatchCard/MatchCard';
 import hamburgerButton from '../../../assets/images/hamburgerButton.png';
 import { PRIMARY_GREEN } from '../../styles';
 import styles from './styles';
+import backArrow from '../../../assets/images/backArrow.png';
 
 @inject('store')
 @observer
 class MatchesPage extends React.Component {
-  static navigationOptions = {
+  static navigationOptions = ({ navigation }) => ({
     title: "City Pups",
     headerStyle: {
       backgroundColor: PRIMARY_GREEN
@@ -34,8 +35,18 @@ class MatchesPage extends React.Component {
           style={styles.hamburgerButton}
         />
       </TouchableHighlight>
+    ),
+    headerLeft: (
+      <TouchableHighlight
+        underlayColor={PRIMARY_GREEN}
+        onPress={() => {
+          navigation.navigate('RoommateQuestionPage');
+        }}
+      >
+        <Image style={styles.backArrowButton} source={backArrow} />
+      </TouchableHighlight>
     )
-  };
+  });
 
   render() {
     return(
@@ -58,8 +69,5 @@ export default createStackNavigator({
   CityPups: {
     screen: MatchesPage
   },
-},
-{
-  headerLayoutPreset: 'left'
 }
 );

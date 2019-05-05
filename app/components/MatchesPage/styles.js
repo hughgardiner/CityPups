@@ -22,6 +22,6 @@ export default StyleSheet.create({
   },
   listView: {
     padding: 10,
-    marginBottom: 10
+    marginBottom: 10,
   }
 });

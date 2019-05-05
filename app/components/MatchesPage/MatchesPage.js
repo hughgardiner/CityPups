@@ -46,7 +46,8 @@ class MatchesPage extends React.Component {
         <View style={styles.listView}>
           <FlatList data={[{name: 'Jim', breed: 'Cat'}, {name: 'Sam', breed: 'golden'}]}
             renderItem={({item}) => <MatchCard data={item}/> }
-            keyExtractor={(item, index) => index.toString()} />
+            keyExtractor={(item, index) => index.toString()} 
+            style={styles.listItem}/>
         </View>
       </View>
     )

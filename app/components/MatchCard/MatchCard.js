@@ -6,6 +6,7 @@ import {
   TouchableOpacity
 } from 'react-native';
 import styles from './styles';
+import rightArrow from '../../../assets/images/rightArrow.png'
 import koda from '../../../assets/images/koda.jpeg';
 
 export const MatchCard = props => {
@@ -14,19 +15,22 @@ export const MatchCard = props => {
       <View style={styles.imageContainer}>
         <Image style={styles.image} source={koda}  />
       </View>
-      <View style={styles.footer}>
-        <View style={styles.textStyle}>
-          <Text styles={styles.dogName}>Koda</Text>
-          <Text> of type {props.breed}</Text>
+      <View style={styles.cardFooter}>
+        <View style={styles.cardFooterText}>
+          <Text style={styles.dogName}>Koda</Text>
+          <Text style={styles.ageAndBreed}>
+          12 month old Golden{props.breed}
+          </Text>
         </View>
-        <View style={styles.profileButton}>
+        <View style={styles.profileButtonContainer}>
           <TouchableOpacity
-            style={styles.navigationButton}
+            style={styles.profileButton}
             onPress={() => {
               navigate('SizeQuestionPage', { navigation: this.props.navigation });
             }}
           >
-            <Text style={styles.navigationButtonText}>View Profile</Text>
+            <Text style={styles.profileButtonText}>View Profile</Text>
+            <Image source={rightArrow} style={styles.rightArrow}/>
           </TouchableOpacity>
         </View>
       </View>

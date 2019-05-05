@@ -39,6 +39,7 @@ export default class QuestionPage extends React.Component {
             style={styles.questionPagePicture}
           />
           <TouchableHighlight
+            underlayColor='transparent'
             onPress={() => {
               navigate(this.props.previousPage);
             }}

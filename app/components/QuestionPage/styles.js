@@ -15,6 +15,9 @@ export default StyleSheet.create({
     top: '90%',
     left: '-40%',
     alignSelf: 'flex-start',
+    width: 30,
+    height: 30,
+    resizeMode: 'contain'
   },
   questionText: {
     flex: 1,
@@ -46,14 +49,7 @@ export default StyleSheet.create({
   },
   continueButtonContainer: {
     flex: 1,
-    width: '80%',
-    justifyContent: 'flex-end',
-  },
-  answerPageNavigationButtonContainer: {
-    flex: 1,
-    width: '80%',
-    paddingVertical: -50,
-    top: 250,
+    width: '80%'
   },
   navigationButtonContainer: {
     flex: 1,

@@ -13,10 +13,18 @@ import hamburgerButton from '../../../assets/images/hamburgerButton.png';
 import { PRIMARY_GREEN } from '../../styles';
 import styles from './styles';
 import backArrow from '../../../assets/images/backArrow.png';
+import { getPupMatches } from '../../services/matchService';
 
 @inject('store')
 @observer
 class MatchesPage extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      matches: null
+    }
+  }
+
   static navigationOptions = ({ navigation }) => ({
     title: "City Pups",
     headerStyle: {
@@ -48,20 +56,39 @@ class MatchesPage extends React.Component {
     )
   });
 
+  async componentDidMount() {
+    this.setState({ matches: await getPupMatches(this.props.store.accessToken) })
+  }
+
   render() {
     return(
       <View style={styles.container}>
         <View style={styles.header}>
           <Text style={styles.headerText}>Best Matches</Text>
         </View>
-        <View style={styles.listView}>
-          <FlatList data={[{name: 'Jim', breed: 'Cat'}, {name: 'Sam', breed: 'golden'}]}
-            renderItem={({item}) => <MatchCard data={item}/> }
-            keyExtractor={(item, index) => index.toString()} 
-            style={styles.listItem}/>
-        </View>
+        {this.state.matches ? (
+            <View style={styles.listView}>
+              <FlatList data={this.parseMatchesResponse(this.state.matches)}
+                renderItem={({item}) => <MatchCard data={item}/> }
+                keyExtractor={(_item, index) => index.toString()} 
+                style={styles.listItem}/>
+            </View>
+          ) : (
+            <Text>Loading...</Text>
+          )
+        }
       </View>
     )
+  }
+
+  parseMatchesResponse(matches) {
+    return matches.animals.map(match => {
+      return {
+        name: match.name,
+        breed: match.breeds.primary,
+        photo: match.photos[0].medium
+      }
+    })
   }
 }
 

@@ -13,7 +13,8 @@ export default StyleSheet.create({
   },
   image: {
     width: 350,
-    height: 182
+    height: 182,
+    resizeMode: 'contain'
   },
   cardFooter: {
     flex: 1,

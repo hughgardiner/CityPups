@@ -1,4 +1,5 @@
 import { observable, action } from 'mobx';
+import { authenticate } from './services/matchService';
 
 export default class Store {
   @observable questions = {
@@ -11,7 +12,7 @@ export default class Store {
     HOUSING: {
       SMALL: false,
       LARGE: false,
-      HOME: false      
+      HOME: false
     },
     SPACE: {
       NONE: false,
@@ -27,6 +28,8 @@ export default class Store {
     }
   }
 
+  @observable accessToken = ''
+
   @action toggleAnswer(questionKey, buttonKey, multiSelect = false) {
     this.questions[questionKey][buttonKey] = !this.questions[questionKey][buttonKey];
     if (!multiSelect && this.questions[questionKey][buttonKey] === true) {
@@ -40,6 +43,12 @@ export default class Store {
         store[key] = false;
       }
     }
+  }
+
+  @action setAccessToken() {
+    authenticate().then(
+      response => this.accessToken = response.access_token
+    )
   }
 }
 

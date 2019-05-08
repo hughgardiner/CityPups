@@ -10,7 +10,6 @@ import { Font, AppLoading } from 'expo';
 import Store from './app/Store';
 import { Provider }  from 'mobx-react';
 
-
 const AppNavigator = createStackNavigator({
   HomePage: {
     screen: HomePage
@@ -52,6 +51,7 @@ export default class App extends React.Component {
       "DancingScript-Bold": require("./assets/fonts/DancingScript-Bold.ttf"),
     })
     this.setState({ fontLoaded: true })
+    store.setAccessToken();
   }
   render() {
     if (!this.state.fontLoaded) {

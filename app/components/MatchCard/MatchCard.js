@@ -7,20 +7,17 @@ import {
 } from 'react-native';
 import styles from './styles';
 import rightArrow from '../../../assets/images/rightArrow.png'
-import koda from '../../../assets/images/koda.jpeg';
 
 export const MatchCard = props => {
   return (
     <View style={styles.container}>
       <View style={styles.imageContainer}>
-        <Image style={styles.image} source={koda}  />
+        <Image style={styles.image} source={{uri: props.data.photo}}  />
       </View>
       <View style={styles.cardFooter}>
         <View style={styles.cardFooterText}>
-          <Text style={styles.dogName}>Koda</Text>
-          <Text style={styles.ageAndBreed}>
-          12 month old Golden{props.breed}
-          </Text>
+          <Text style={styles.dogName}>{props.data.name}</Text>
+          <Text style={styles.ageAndBreed}>{props.data.breed}</Text>
         </View>
         <View style={styles.profileButtonContainer}>
           <TouchableOpacity

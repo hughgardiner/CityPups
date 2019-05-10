@@ -5,6 +5,7 @@ import SizeQuestionPage from './app/components/SizeQuestionPage/SizeQuestionPage
 import HousingQuestionPage from './app/components/HousingQuestionPage/HousingQuestionPage';
 import SpaceQuestionPage from './app/components/SpaceQuestionPage/SpaceQuestionPage';
 import RoommateQuestionPage from './app/components/RoommateQuestionPage/RoommateQuestionPage';
+import AloneTimeQuestionPage from './app/components/AloneTimeQuestionPage/AloneTimeQuestionPage';
 import MatchesPage from './app/components/MatchesPage/MatchesPage';
 import { Font, AppLoading } from 'expo';
 import Store from './app/Store';
@@ -25,6 +26,9 @@ const AppNavigator = createStackNavigator({
   },
   RoommateQuestionPage: {
     screen: RoommateQuestionPage
+  },
+  AloneTimeQuestionPage: {
+    screen: AloneTimeQuestionPage
   },
   MatchesPage: {
     screen: MatchesPage

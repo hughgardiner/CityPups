@@ -26,16 +26,10 @@ class MatchesPage extends React.Component {
   }
 
   static navigationOptions = ({ navigation }) => ({
-    title: "City Pups",
     headerStyle: {
       backgroundColor: PRIMARY_GREEN
     },
     headerTintColor: "#fff",
-    headerTitleStyle: {
-      fontWeight: "bold",
-      fontFamily: 'DancingScript-Bold',
-      fontSize: 25
-    },
     headerRight: (
       <TouchableHighlight>
         <Image
@@ -48,7 +42,7 @@ class MatchesPage extends React.Component {
       <TouchableHighlight
         underlayColor={PRIMARY_GREEN}
         onPress={() => {
-          navigation.navigate('RoommateQuestionPage');
+          navigation.navigate('AloneTimeQuestionPage');
         }}
       >
         <Image style={styles.backArrowButton} source={backArrow} />
@@ -70,8 +64,7 @@ class MatchesPage extends React.Component {
             <View style={styles.listView}>
               <FlatList data={this.parseMatchesResponse(this.state.matches)}
                 renderItem={({item}) => <MatchCard data={item}/> }
-                keyExtractor={(_item, index) => index.toString()} 
-                style={styles.listItem}/>
+                keyExtractor={(_item, index) => index.toString()} />
             </View>
           ) : (
             <Text>Loading...</Text>

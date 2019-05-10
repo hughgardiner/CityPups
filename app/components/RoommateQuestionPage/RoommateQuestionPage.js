@@ -45,7 +45,7 @@ export default class RoommateQuestionPage extends React.Component {
       navigation: this.props.navigation,
       answerButtons: roommatePageButtons,
       previousPage: 'SpaceQuestionPage',
-      nextPage: 'MatchesPage',
+      nextPage: 'AloneTimeQuestionPage',
       multiSelect: true,
       questionKey: Roommates.ROOMMATES
     }

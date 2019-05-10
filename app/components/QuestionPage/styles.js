@@ -24,12 +24,9 @@ export default StyleSheet.create({
     color: 'white',
     fontFamily: 'HelveticaNeue-Bold',
     fontSize: 32,
-    top: '15%',
-    left: '-5%',
-    right: '10%',
+    top: '10%'
   },
   answerPanel: {
-    flex: 1,
     position: 'absolute',
     borderColor: '#000000',
     backgroundColor: 'white',
@@ -37,9 +34,11 @@ export default StyleSheet.create({
     left: '6%',
     right: '6%',
     bottom: '20%',
-    flexDirection: 'column',
     alignItems: 'center',
-    paddingVertical: '13%',
+    paddingVertical: '10%',
+    shadowColor: "black",
+    shadowOpacity: 0.18,
+    shadowOffset: { width: 0, height: 5 },
   },
   questionPagePicture: {
     width: '100%',

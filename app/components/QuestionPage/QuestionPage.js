@@ -20,7 +20,7 @@ export default class QuestionPage extends React.Component {
 
   render() {
     const { navigate } = this.props.navigation;
-    const answerButtons = this.props.answerButtons.map(function(answerButton, i) {
+    const answerButtons = this.props.answerSlider? this.props.answerSlider : this.props.answerButtons.map(function(answerButton, i) {
       return (<AnswerButton
         key={i}
         buttonKey={answerButton.buttonKey}
@@ -61,7 +61,9 @@ export default class QuestionPage extends React.Component {
             <TouchableOpacity style={styles.navigationButton} onPress={() => {
               navigate(this.props.nextPage);
             }}>
-              <Text style={styles.navigationButtonText}>Continue</Text>
+              <Text style={styles.navigationButtonText}>
+                {this.props.nextPage == 'MatchesPage' ? 'Show Me My Matches' : 'Continue'}
+              </Text>
             </TouchableOpacity>
           </View>
         </View>

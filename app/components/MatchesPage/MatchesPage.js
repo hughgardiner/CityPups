@@ -79,7 +79,7 @@ class MatchesPage extends React.Component {
       return {
         name: match.name,
         breed: match.breeds.primary,
-        photo: match.photos[0].full
+        photo: match.photos[0]
       }
     })
   }

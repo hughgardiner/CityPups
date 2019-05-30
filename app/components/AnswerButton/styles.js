@@ -3,7 +3,6 @@ import { PRIMARY_GREEN } from '../../styles';
 
 export default StyleSheet.create({
   answerButtonContainer: {
-    flex: 1,
     width: '80%',
     justifyContent: 'space-between',
   },

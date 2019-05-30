@@ -3,12 +3,10 @@ import { PRIMARY_GREEN } from '../../styles';
 
 export default StyleSheet.create({
   container: {
-    flex: 1,
     borderRadius: 8,
     overflow: 'hidden',
   },
   imageContainer: {
-    flex: 1,
     alignItems: 'center'
   },
   image: {
@@ -17,14 +15,10 @@ export default StyleSheet.create({
     resizeMode: 'cover'
   },
   cardFooter: {
-    flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-around',
     padding: 20
-  },
-  cardFooterText: {
-    flex: 1
   },
   dogName: {
     fontFamily: 'HelveticaNeue-Bold',
@@ -37,7 +31,6 @@ export default StyleSheet.create({
     color: '#636363'
   },
   profileButtonContainer: {
-    flex: 1,
     maxHeight: 40
   },
   profileButton: {

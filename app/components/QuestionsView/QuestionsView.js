@@ -11,9 +11,8 @@ import { AnswerButton } from '../AnswerButton/AnswerButton';
 import styles from './styles';
 import questionPageBackground from '../../../assets/images/questionPageBackground.png';
 import backArrow from '../../../assets/images/backArrow.png';
-import CityPup from '../CityPup/CityPup';
 
-export default class QuestionPage extends React.Component {
+export default class QuestionView extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -49,11 +48,6 @@ export default class QuestionPage extends React.Component {
           <Text style={styles.questionText}>
             {this.props.questionText}
           </Text>
-        </Container>
-        <Container style={styles.bottomPanel}>
-          <View style={styles.cityPupContainer}>
-            <CityPup />
-          </View>
         </Container>
         <View style={styles.answerPanel}>
           {answerButtons}

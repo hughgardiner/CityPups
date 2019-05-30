@@ -2,7 +2,6 @@ import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
   sliderContainer: {
-    flex: 1,
     flexBasis:100
   },
   slider: {

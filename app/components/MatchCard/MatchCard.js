@@ -12,16 +12,16 @@ import helperDog from '../../../assets/images/helperDog.png';
 export const MatchCard = props => {
   let source = props.data.photo ? {uri: props.data.photo.full} : helperDog;
   return (
-    <View style={styles.container}>
-      <View style={styles.imageContainer}>
+    <Container style={styles.container}>
+      <Container style={styles.imageContainer}>
         <Image style={styles.image} source={source}  />
-      </View>
-      <View style={styles.cardFooter}>
-        <View style={styles.cardFooterText}>
+      </Container>
+      <Container style={styles.cardFooter}>
+        <Container>
           <Text style={styles.dogName}>{props.data.name}</Text>
           <Text style={styles.ageAndBreed}>{props.data.breed}</Text>
-        </View>
-        <View style={styles.profileButtonContainer}>
+        </Container>
+        <Container style={styles.profileButtonContainer}>
           <TouchableOpacity
             style={styles.profileButton}
             onPress={() => {
@@ -31,8 +31,8 @@ export const MatchCard = props => {
             <Text style={styles.profileButtonText}>View Profile</Text>
             <Image source={rightArrow} style={styles.rightArrow}/>
           </TouchableOpacity>
-        </View>
-      </View>
-    </View>
+        </Container>
+      </Container>
+    </Container>
   );
 }

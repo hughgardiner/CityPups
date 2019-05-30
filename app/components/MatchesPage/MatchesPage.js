@@ -3,17 +3,19 @@ import {
   View,
   TouchableHighlight,
   Image,
-  Text
+  Text,
+  FlatList
 } from 'react-native';
+import Container from '../Container';
 import { createStackNavigator } from "react-navigation";
 import { observer, inject } from 'mobx-react'
-import { FlatList } from 'react-native';
 import { MatchCard } from '../MatchCard/MatchCard';
 import hamburgerButton from '../../../assets/images/hamburgerButton.png';
+import backArrow from '../../../assets/images/backArrow.png';
 import { PRIMARY_GREEN } from '../../styles';
 import styles from './styles';
-import backArrow from '../../../assets/images/backArrow.png';
 import { getPupMatches } from '../../services/matchService';
+import LoadingView from '../LoadingView/LoadingView';
 
 @inject('store')
 @observer
@@ -56,7 +58,7 @@ class MatchesPage extends React.Component {
 
   render() {
     return(
-      <View style={styles.container}>
+      <Container style={styles.container}>
         <View style={styles.header}>
           <Text style={styles.headerText}>Best Matches</Text>
         </View>
@@ -67,10 +69,10 @@ class MatchesPage extends React.Component {
                 keyExtractor={(_item, index) => index.toString()} />
             </View>
           ) : (
-            <Text>Loading...</Text>
+            <LoadingView/>
           )
         }
-      </View>
+      </Container>
     )
   }
 

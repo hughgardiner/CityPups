@@ -2,11 +2,7 @@ import { StyleSheet } from 'react-native';
 import { PRIMARY_GREEN } from '../../styles';
 
 export default StyleSheet.create({
-  container: {
-    flex: 1,
-  },
   topPanel: {
-    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#00DF5D',
@@ -29,7 +25,6 @@ export default StyleSheet.create({
     fontSize: 50,
   },
   bottomPanel: {
-    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -51,7 +46,6 @@ export default StyleSheet.create({
     top: -57,
   },
   navigationButtonContainer: {
-    flex: 1,
     width: '80%',
     paddingVertical: -50,
   },

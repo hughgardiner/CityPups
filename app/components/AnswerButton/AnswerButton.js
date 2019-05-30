@@ -8,6 +8,7 @@ import {
 import styles from './styles';
 import answerCheck from '../../../assets/images/answerCheck.png';
 import { observer, inject } from 'mobx-react';
+import Container from '../Container';
 
 const selectedState = {
   selected: true,
@@ -44,7 +45,7 @@ export class AnswerButton extends React.Component {
     ) : null;
 
     return (
-      <View style={styles.answerButtonContainer}>
+      <Container style={styles.answerButtonContainer}>
         <TouchableOpacity
           style={[styles.answerButton, buttonState.buttonColor]}
           onPress={this.buttonPressed}
@@ -58,7 +59,7 @@ export class AnswerButton extends React.Component {
           </Text>
           {buttonCheck}
         </TouchableOpacity>
-      </View>
+      </Container>
     );
   }
 }

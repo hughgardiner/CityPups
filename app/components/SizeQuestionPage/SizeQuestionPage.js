@@ -1,4 +1,7 @@
 import React from 'react';
+import {
+  View
+} from 'react-native';
 import styles from './styles';
 import tinyDogIcon from '../../../assets/images/tinyDogIcon.png';
 import smallDogIcon from '../../../assets/images/smallDogIcon.png';
@@ -6,6 +9,7 @@ import mediumDogIcon from '../../../assets/images/mediumDogIcon.png';
 import largeDogIcon from '../../../assets/images/largeDogIcon.png';
 import QuestionPage from '../QuestionPage/QuestionPage';
 import * as DogSizes from '../../constants/dogSizes';
+import CityPup from '../CityPup/CityPup';
 
 const sizePageButtons = [
   {

@@ -2,9 +2,6 @@ import { StyleSheet } from 'react-native';
 import { PRIMARY_GREEN } from '../../styles';
 
 export default StyleSheet.create({
-  container: {
-    flex: 1
-  },
   header: {
     flexBasis: 50,
     justifyContent: 'center',

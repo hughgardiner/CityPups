@@ -30,5 +30,12 @@ export default StyleSheet.create({
     height: 35,
     left: 7,
     top: 1,
+  },
+  bottomPanel: {
+    // justifyContent: 'flex-end',
+  },
+  cityPupContainer: {
+    // top: 50,
+    // left: 20
   }
 });

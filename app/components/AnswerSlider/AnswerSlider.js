@@ -11,7 +11,7 @@ import sliderSquare from '../../../assets/images/sliderSquare.png';
 export default class AnswerSlider extends React.Component {
   render() {
     return (
-      <View style={styles.sliderContainer}>
+      <Container style={styles.sliderContainer}>
         <View style={styles.textContainer}>
           <Text style={styles.redText}>{'<'} 40 Hours</Text>
           <Text style={styles.greenText}>Not at all!</Text>
@@ -35,7 +35,7 @@ export default class AnswerSlider extends React.Component {
             thumbImage={sliderSquare}
           />
         </LinearGradient>
-      </View>
+      </Container>
     )
   }
 }
